@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # Save the output to OUTFILE using numpy routines.
     rdf = np.loadtxt(INFILE)
     rdf -= rdf.mean()
-    std2 = raw_data.std()
+    std2 = rdf.std()
     
     processed=rdf/std2
     os.makedirs(root_dir / "outputs", exist_ok=True)
